@@ -36,13 +36,7 @@ export function useRequest({
         headers: headerParams,
       })
       .then(({ data }) => {
-        if (data?.status?.code !== undefined && data?.status?.code !== 200) {
-          throw data;
-        }
         return data;
-      })
-      .then((res) => {
-        return res.data;
       });
   };
 

@@ -29,9 +29,7 @@ export const TableWrapper = () => {
           {(item) => (
             <TableRow>
               {(columnKey) => (
-                <TableCell>
-                  {RenderCell({ user: item, columnKey: columnKey })}
-                </TableCell>
+                <TableCell>{RenderCell({ item, columnKey })}</TableCell>
               )}
             </TableRow>
           )}
